@@ -23,4 +23,14 @@ public class ServerController {
     public List<Server> getAllServers() {
         return serverService.getAllServers();
     }
+
+    @PutMapping("/collect/{id}")
+    public Server collectTicket(@PathVariable String id) {
+        return serverService.collectTicket(id);
+    }
+
+    @GetMapping("/check/{transactionId}")
+    public boolean checkStatus(@PathVariable String transactionId) {
+        return serverService.checkCollectionStatus(transactionId);
+    }
 }

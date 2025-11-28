@@ -7,5 +7,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ServerRepository extends MongoRepository<Server, String> {
     // You can add custom lookups here effortlessly:
-    // Server findByTransactionId(int transactionId);
+    Server findByTransactionId(String transactionId);
 }
